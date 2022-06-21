@@ -49,7 +49,7 @@ session.getById = async function (sessionId) {
  */
 session.post = async function (session) {
   const rows = await db.query(
-    `INSERT INTO session SET ${prepareQuery(smartzone)}`,
+    `INSERT INTO session SET ${prepareQuery(session)}`,
     prepareParams(session)
   )
   session.sessionId = rows.insertId
