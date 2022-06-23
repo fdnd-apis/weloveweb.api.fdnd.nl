@@ -8,7 +8,7 @@ module.exports = express
   .post('/', async (req, res, next) => {
     try {
       console.log('Got: ', req.body)
-      res.json(await Session.create(new Session(req.body)))
+      res.json(await Session.post(new Session(req.body)))
     } catch (err) {
       console.error('Error while adding: ', err.message)
       next(err)
