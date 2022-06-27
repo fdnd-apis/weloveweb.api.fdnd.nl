@@ -9,6 +9,14 @@ const helper = require('./helper')
 const session = function (session) {
   // TODO: Check for sanity...
   this.sessionId = session.sessionId
+  this.title = session.title
+  this.speaker = session.speaker
+  this.datetime = session.datetime
+  this.location = session.location
+  this.short_description = session.short_description
+  this.description = session.description
+  this.link = session.link
+
 }
 
 /**
