@@ -46,7 +46,7 @@ session.getById = async function (sessionId) {
   const rows = await db.query(`SELECT * FROM session WHERE sessionId = ?`, [sessionId])
   return {
     data: helper.emptyOrRows(rows),
-    meta: { page },
+    meta: {},
   }
 }
 
